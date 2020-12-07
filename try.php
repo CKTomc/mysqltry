@@ -23,8 +23,9 @@ $statement->bind_param('ss',$name,$email);
 $name='Khad'
 $email='khad@gmail.com'
 $statement->execute();
-$statement.close();
+$statement->close();
 $conn->close();
 ?>
 
 //$last_id=$conn->insert_id; for getting last inserted row
+//prepare statements protect against sql injections
